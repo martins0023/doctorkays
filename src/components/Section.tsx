@@ -1,12 +1,12 @@
 import React from 'react';
-import { whatismos } from "../assets";
+// import { whatismos } from "../assets";
 
 interface SectionProps {
   title: string;
   children: React.ReactNode;
 }
 
-const Section: React.FC<SectionProps> = ({ title, children }) => {
+const Section: React.FC<SectionProps> = ({ children }) => {
   return (
     <section className="p-4 md:p-8 bg-[#F9F5FF] mt-5">
       <h2 className="text-[30px] text-center md:text-3xl font-semibold mb-3 relative">

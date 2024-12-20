@@ -7,7 +7,7 @@ interface CardProps {
   link: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, description, imageUrl, link }) => {
+const Card: React.FC<CardProps> = ({ title, description, imageUrl }) => {
   return (
     <div className="overflow-hidden">
       <img src={imageUrl} alt={title} className="w-full h-60 md:h-64 object-cover rounded-br-[50px]" />

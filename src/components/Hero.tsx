@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from './Button';
-import { doc1, bghome, bghomesvg } from "../assets";
+import { bghomesvg } from "../assets";
 
 const Hero: React.FC = () => {
   return (
