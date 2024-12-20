@@ -2,7 +2,7 @@ import React from 'react';
 
 const Sidebar: React.FC = () => {
   return (
-    <aside className="w-64 bg-secondary text-white h-full fixed">
+    <aside className="w-64 bg-white text-black h-full fixed">
       <ul>
         <li className="p-4">Home</li>
         <li className="p-4">About</li>

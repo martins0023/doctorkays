@@ -16,7 +16,20 @@ import bghome from "./bg-home.png";
 import bghomesvg from "./bg-home.svg";
 import sponsor from "./sponsor.png";
 import mos from "./mos.jpg";
+import moscard1 from "./mos-1.jpeg";
+import moscard2 from "./mos-2.jpg";
 import whatismos from "./what-is-mos.svg";
+import clinicsection from "./clinic-series.svg";
+import healthnugget from "./health-nugget.svg";
+import clinicseries1 from "./clinic-series1.jpeg";
+import clinicseries2 from "./clinic-series2.jpeg";
+import clinicseries from "./clinic-series.jpg";
+import blogsection from "./blog-section.svg";
+import stayintouch from "./stay-in-touch.svg";
+import linkedin from "./linkedin.svg";
+import instagram from "./instagram.svg";
+import twitter from "./twitter.svg";
+import facebook from "./facebook.svg";
 
 
 export {
@@ -38,5 +51,18 @@ export {
   bghomesvg,
   sponsor,
   mos,
+  moscard2,
+  moscard1,
   whatismos,
+  clinicsection,
+  healthnugget,
+  clinicseries1,
+  clinicseries2,
+  clinicseries,
+  blogsection,
+  stayintouch,
+  linkedin,
+  instagram,
+  twitter,
+  facebook,
 };

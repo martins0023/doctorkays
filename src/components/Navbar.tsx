@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
             </div>
             <div>
                 <div className="bg-white w-[34px] h-[34px] flex justify-center items-center rounded-md">
-                    <img src={menu} className="w-[30px] h-[30px]" />
+                    <img src={menu} alt="menu" className="w-[30px] h-[30px]" />
                 </div>
             </div>
         </nav>
