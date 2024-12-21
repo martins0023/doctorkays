@@ -30,9 +30,19 @@ import linkedin from "./linkedin.svg";
 import instagram from "./instagram.svg";
 import twitter from "./twitter.svg";
 import facebook from "./facebook.svg";
+import faqs from "./faqs.svg";
+import bgblog from "./bg-blog.svg";
+import bgabout from "./bg-about.svg";
+import bgconsult from "./bg-consult.svg";
+import bgcontact from "./bg-contact.svg";
+import bgfaq from "./bg-faq.svg";
+import abouttitle from "./about.svg";
+import journeytitle from "./journeytitle.svg";
 
 
 export {
+  journeytitle,
+  abouttitle,
   menu,
   logo,
   close,
@@ -65,4 +75,10 @@ export {
   instagram,
   twitter,
   facebook,
+  faqs,
+  bgblog,
+  bgabout,
+  bgconsult,
+  bgcontact,
+  bgfaq,
 };
