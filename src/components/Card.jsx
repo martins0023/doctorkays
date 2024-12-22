@@ -8,9 +8,9 @@ const Card = ({ title, description, imageUrl, link }) => {
         alt={title}
         className="w-full h-60 md:h-64 object-cover rounded-br-[50px]"
       />
-      <div className="p-4">
-        <h3 className="text-xl font-bold">{title}</h3>
-        <p className="mt-2 text-gray-600">{description}</p>
+      <div className="">
+        <h3 className="text-xl font-bold mt-2">{title}</h3>
+        <p className="mt-2 text-black font-normal font-poppins text-[16px]">{description}</p>
         {/* Uncomment the link below if needed */}
         {/* <a href={link} className="mt-4 inline-block text-primary">Read more</a> */}
       </div>

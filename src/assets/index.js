@@ -38,9 +38,12 @@ import bgcontact from "./bg-contact.svg";
 import bgfaq from "./bg-faq.svg";
 import abouttitle from "./about.svg";
 import journeytitle from "./journeytitle.svg";
+import doctorimage from "./doctorkays.jpg";
+import contacttitle from "./contact-title.svg";
 
 
 export {
+  contacttitle,
   journeytitle,
   abouttitle,
   menu,
@@ -81,4 +84,5 @@ export {
   bgconsult,
   bgcontact,
   bgfaq,
+  doctorimage,
 };

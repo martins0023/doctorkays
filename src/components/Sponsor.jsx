@@ -3,7 +3,7 @@ import { sponsor } from "../assets";
 
 const Sponsor = () => {
   return (
-    <div className="overflow-x-auto whitespace-nowrap p-4">
+    <div className="overflow-x-auto whitespace-nowrap p-4 scrollbar-hide">
       <div className="flex flex-row gap-5">
         <img src={sponsor} className="inline-block" />
         <img src={sponsor} className="inline-block" />

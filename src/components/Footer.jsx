@@ -3,45 +3,45 @@ import { logo, facebook, twitter, linkedin, instagram } from "../assets";
 
 const Footer = () => {
   return (
-    <div className="bg-[#E5EDFF]">
+    <div className="bg-[#F9F5FF]">
       <div className="mt-3 p-4">
         <img src={logo} alt="doctorkays" />
         <p className="text-black font-semibold text-[16px]">Doctorkays</p>
-        <p className="mt-1 font-medium text-[14px] font-montserrat">Donec dui massa, varius a consequat at, ultrices a neque. Ut augue erat, dignissim ultricies bibendum sed, pharetra ut neque.</p>
+        <p className="mt-1 font-medium text-[16px] font-montserrat">Donec dui massa, varius a consequat at, ultrices a neque. Ut augue erat, dignissim ultricies bibendum sed, pharetra ut neque.</p>
       </div>
 
       {/* company */}
       <div className="p-4">
-        <p className="font-semibold text-[20px] font-montserrat">Company</p>
+        <p className="font-semibold text-[18px] font-montserrat">Company</p>
         <hr className="bg-primary w-[63px] h-[4px]"/>
 
         <div className="mt-3 flex flex-col">
-          <p className="cursor-pointer font-normal text-[18px] font-montserrat text-black">About us</p>
-          <p className="cursor-pointer font-normal text-[18px] font-montserrat text-black">Contact</p>
+          <p className="cursor-pointer font-normal text-[16px] font-montserrat text-black">About us</p>
+          <p className="cursor-pointer font-normal text-[16px] font-montserrat text-black">Contact</p>
         </div>
       </div>
 
       {/* products */}
       <div className="p-4">
-        <p className="font-semibold text-[20px] font-montserrat">Products</p>
+        <p className="font-semibold text-[18px] font-montserrat">Products</p>
         <hr className="bg-primary w-[63px] h-[4px]"/>
 
         <div className="mt-3 flex flex-col">
-          <p className="cursor-pointer font-normal text-[18px] font-montserrat text-black">Dr Ai</p>
-          <p className="cursor-pointer font-normal text-[18px] font-montserrat text-black">Shops</p>
+          <p className="cursor-pointer font-normal text-[16px] font-montserrat text-black">Dr Ai</p>
+          <p className="cursor-pointer font-normal text-[16px] font-montserrat text-black">Shops</p>
         </div>
       </div>
 
       {/* resources */}
       <div className="p-4">
-        <p className="font-semibold text-[20px] font-montserrat">Resources</p>
+        <p className="font-semibold text-[18px] font-montserrat">Resources</p>
         <hr className="bg-primary w-[63px] h-[4px]"/>
 
         <div className="mt-3 flex flex-col">
-          <p className="cursor-pointer font-normal text-[18px] font-montserrat text-black">Blog</p>
-          <p className="cursor-pointer font-normal text-[18px] font-montserrat text-black"> FAQs</p>
-          <p className="cursor-pointer font-normal text-[18px] font-montserrat text-black">MOS</p>
-          <p className="cursor-pointer font-normal text-[18px] font-montserrat text-black">Clinic Series</p>
+          <p className="cursor-pointer font-normal text-[16px] font-montserrat text-black">Blog</p>
+          <p className="cursor-pointer font-normal text-[16px] font-montserrat text-black"> FAQs</p>
+          <p className="cursor-pointer font-normal text-[16px] font-montserrat text-black">MOS</p>
+          <p className="cursor-pointer font-normal text-[16px] font-montserrat text-black">Clinic Series</p>
         </div>
       </div>
 

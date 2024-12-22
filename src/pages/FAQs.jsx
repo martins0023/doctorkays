@@ -45,7 +45,7 @@ const FAQs = () => {
 
         {/* loop faqs */}
         {faqsCard.map((card, index) => (
-          <div key={index} className="flex flex-col mt-5 mb-10">
+          <div key={index} className="flex flex-col mt-10 mb-10">
             <div className="bg-primary flex items-center justify-center justify-items-center w-[56px] h-[36px] rounded-md">
               <p className="text-white font-semibold text-[20px]">{card.id}</p>
             </div>

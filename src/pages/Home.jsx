@@ -118,7 +118,7 @@ const Home = () => {
           <div className="mb-3 flex items-center justify-center">
             <img src={healthnugget} alt="What is Health Nugget" />
           </div>
-          <p className="font-montserrat text-[14px] text-center font-medium">
+          <p className="font-montserrat text-[16px] text-center font-medium">
             Donec dui massa, varius a consequat at, ultrices a neque. Ut augue
             erat, dignissim ultricies bibendum sed, pharetra ut neque. Aliquam
             venenatis felis odio, eget molestie velit tristique nec. Praesent ac
@@ -154,7 +154,7 @@ const Home = () => {
                     <div className="flex justify-end items-end">
                       <Button
                         onClick={() => {}}
-                        className="h-[35px] w-[150px] border-1 bg-none text-black text-[12px] font-medium font-montserrat rounded-full border-primary mt-4 md:mt-0 md:ml-4"
+                        className="h-[40px] w-[150px] border-1 bg-none text-black text-[12px] font-medium font-montserrat rounded-full border-primary mt-4 md:mt-0 md:ml-4"
                         img={<img src={east} alt="Icon" className="w-5 h-5" />}
                         text="Read more"
                       />
@@ -174,8 +174,8 @@ const Home = () => {
           <div className="flex pt-5 items-center justify-center">
             <img src={clinicsection} alt="clinic series" />
           </div>
-          <div className="mt-3">
-            <p className="font-montserrat text-[14px] text-center font-medium">
+          <div className="">
+            <p className="font-montserrat p-4 text-[16px] text-center font-medium">
               Donec dui massa, varius a consequat at, ultrices a neque. Ut augue
               erat, dignissim ultricies bibendum sed, pharetra ut neque. Aliquam
               venenatis felis odio, eget molestie velit tristique nec. Praesent
@@ -183,7 +183,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="flex flex-col gap-4 mt-4 p-4">
+          <div className="flex flex-col gap-4 p-4">
             {clinicseriesCards.map((card, index) => (
               <div key={index} className=" bg-white rounded-t-lg w-full gap-3">
                 <div className="w-full">

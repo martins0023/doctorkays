@@ -16,7 +16,7 @@ const Sidebar = ({ onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 bg-black bg-opacity-50">
-      <aside className="w-[323px] bg-white text-black h-full fixed top-0 right-0 shadow-lg">
+      <aside className="w-80 bg-white text-black h-full fixed top-0 right-0 shadow-lg">
         <div className="flex justify-end items-center p-4">
           <button
             onClick={onClose}
