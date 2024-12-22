@@ -63,6 +63,7 @@ const About = () => {
         </div>
       </div>
 
+      {/* journey section */}
       <div className="p-4">
         <div className="flex items-center justify-center">
           <img src={journeytitle} alt="Journey title" />
@@ -112,16 +113,16 @@ const About = () => {
               a tech lover, family advocate and firm believer in preventive and
               community medicine. His passion lies in promoting health awareness
               through engaging, relatable content that combines storytelling and
-              humor. 
-              <br className="pt-3"/>
-              Weekly, through our unique content pillars—Health Nuggets,
-              Clinic Series, Clinic online and the interactive street segment
-              Medicine on the Street with Dr. Kays— We explore lifestyle,
-              disease prevention, general health and wellness. 
+              humor.
+              <br className="pt-3" />
+              Weekly, through our unique content pillars—Health Nuggets, Clinic
+              Series, Clinic online and the interactive street segment Medicine
+              on the Street with Dr. Kays— We explore lifestyle, disease
+              prevention, general health and wellness.
               <br />
-              Our mission? Is
-              to turn medicine from a head-scratcher into your friendly
-              companion - relatable, understandable, and yes, even a bit fun! 
+              Our mission? Is to turn medicine from a head-scratcher into your
+              friendly companion - relatable, understandable, and yes, even a
+              bit fun!
               <br />
               We align our works with the World Health Organization calendar and
               delve into trending medical topics to ensure our audience stays

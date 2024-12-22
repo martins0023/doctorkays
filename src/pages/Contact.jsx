@@ -12,6 +12,10 @@ import Footer from "../components/Footer";
 import Form from "../components/Form";
 
 const Contact = () => {
+  const handleFormSubmit = (formData) => {
+    console.log("Form Data:", formData);
+    // Add logic to send confirmation email here
+  };
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
@@ -34,7 +38,9 @@ const Contact = () => {
             className="bg-primary text-white rounded-full mt-4 h-[42px]"
             // img={<div className="w-[40.03px] h-[40.03px] bg-white rounded-full p-1 flex items-center justify-center"><img src={east} alt="Icon" className="w-5 h-5" /> </div>}
           />
-          <p className="text-[16px] font-poppins underline mt-2 font-normal">with calendly</p>
+          <p className="text-[16px] font-poppins underline mt-2 font-normal">
+            with calendly
+          </p>
         </div>
 
         <div className="mt-5">
@@ -42,11 +48,14 @@ const Contact = () => {
             Get in Touch
           </p>
           <hr className="bg-primary w-[80px] h-[4px]" />
-          <p className="mt-5 font-poppins text-[16px]">Etiam ac metus diam. Ut porta ultrices pulvinar. Nulla sit amet congue neque, accumsan tempus eros.</p>
+          <p className="mt-5 font-poppins text-[16px]">
+            Etiam ac metus diam. Ut porta ultrices pulvinar. Nulla sit amet
+            congue neque, accumsan tempus eros.
+          </p>
         </div>
 
         <div className="mt-3">
-          <Form />
+          <Form onSubmit={handleFormSubmit} />
         </div>
       </main>
 

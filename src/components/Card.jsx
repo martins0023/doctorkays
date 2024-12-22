@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Card = ({ title, description, imageUrl, link }) => {
   return (
@@ -10,7 +10,9 @@ const Card = ({ title, description, imageUrl, link }) => {
       />
       <div className="">
         <h3 className="text-xl font-bold mt-2">{title}</h3>
-        <p className="mt-2 text-black font-normal font-poppins text-[16px]">{description}</p>
+        <p className="mt-2 text-black font-normal font-poppins text-[16px]">
+          {description}
+        </p>
         {/* Uncomment the link below if needed */}
         {/* <a href={link} className="mt-4 inline-block text-primary">Read more</a> */}
       </div>
