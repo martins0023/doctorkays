@@ -3,30 +3,47 @@ import { Link, useLocation } from "react-router-dom";
 import { close, east } from "../assets";
 import Button from './Button';
 import { useNavigate } from 'react-router-dom';
+import { motion } from "framer-motion";
+import { fadeIn, slideInFromRight, animateOnHover } from "./animations";
 
 const Sidebar = ({ onClose }) => {
   const location = useLocation();
   const navigate = useNavigate();
 
   const handleConsultNav = () => {
-    navigate("/consultation")
-  }
+    navigate("/consultation");
+  };
 
   const isActive = (path) => location.pathname === path;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black bg-opacity-50">
-      <aside className="w-80 bg-white text-black h-full fixed top-0 right-0 shadow-lg">
+    <motion.div
+      className="fixed inset-0 z-50 bg-black bg-opacity-50"
+      initial="hidden"
+      animate="visible"
+      variants={fadeIn}
+    >
+      <motion.aside
+        className="w-80 bg-white text-black h-full fixed top-0 right-0 shadow-lg"
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+        variants={slideInFromRight}
+      >
         <div className="flex justify-end items-center p-4">
-          <button
+          <motion.button
             onClick={onClose}
             className="text-black text-2xl font-bold focus:outline-none"
+            whileHover={{ scale: 1.1 }}
           >
             <img src={close} alt="close" className="w-[30px] h-[30px]" />
-          </button>
+          </motion.button>
         </div>
         <ul className="mt-4">
-          <li>
+          <motion.li
+            whileHover={animateOnHover.whileHover}
+            whileTap={animateOnHover.whileTap}
+          >
             <Link
               to="/"
               className={`p-4 block font-semibold text-[18px] cursor-pointer ${
@@ -35,8 +52,11 @@ const Sidebar = ({ onClose }) => {
             >
               Home
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            whileHover={animateOnHover.whileHover}
+            whileTap={animateOnHover.whileTap}
+          >
             <Link
               to="/about"
               className={`p-4 block font-semibold text-[18px] cursor-pointer ${
@@ -45,8 +65,11 @@ const Sidebar = ({ onClose }) => {
             >
               About Us
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            whileHover={animateOnHover.whileHover}
+            whileTap={animateOnHover.whileTap}
+          >
             <Link
               to="/blog"
               className={`p-4 block font-semibold text-[18px] cursor-pointer ${
@@ -55,8 +78,11 @@ const Sidebar = ({ onClose }) => {
             >
               Blog
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            whileHover={animateOnHover.whileHover}
+            whileTap={animateOnHover.whileTap}
+          >
             <Link
               to="/dr-ai"
               className={`p-4 block font-semibold text-[18px] cursor-pointer ${
@@ -65,8 +91,11 @@ const Sidebar = ({ onClose }) => {
             >
               Dr Ai
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            whileHover={animateOnHover.whileHover}
+            whileTap={animateOnHover.whileTap}
+          >
             <Link
               to="/shop"
               className={`p-4 block font-semibold text-[18px] cursor-pointer ${
@@ -75,8 +104,11 @@ const Sidebar = ({ onClose }) => {
             >
               Shop
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            whileHover={animateOnHover.whileHover}
+            whileTap={animateOnHover.whileTap}
+          >
             <Link
               to="/services"
               className={`p-4 block font-semibold text-[18px] cursor-pointer ${
@@ -85,8 +117,11 @@ const Sidebar = ({ onClose }) => {
             >
               Services
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            whileHover={animateOnHover.whileHover}
+            whileTap={animateOnHover.whileTap}
+          >
             <Link
               to="/contact"
               className={`p-4 block font-semibold text-[18px] cursor-pointer ${
@@ -95,8 +130,11 @@ const Sidebar = ({ onClose }) => {
             >
               Contact
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            whileHover={animateOnHover.whileHover}
+            whileTap={animateOnHover.whileTap}
+          >
             <Link
               to="/faqs"
               className={`p-4 block font-semibold text-[18px] cursor-pointer ${
@@ -105,7 +143,7 @@ const Sidebar = ({ onClose }) => {
             >
               FAQs
             </Link>
-          </li>
+          </motion.li>
         </ul>
         <div className="mt-4 p-4">
           <Button
@@ -115,8 +153,8 @@ const Sidebar = ({ onClose }) => {
             text="Book your appointment"
           />
         </div>
-      </aside>
-    </div>
+      </motion.aside>
+    </motion.div>
   );
 };
 

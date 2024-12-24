@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeIn, slideInFromLeft, slideInFromRight, slideInFromTop, slideInFromBottom, zoomIn, zoomOut, rotateIn, rotateOut, bounce, pulse, staggerContainer, animateOnHover, animateOnClick } from "../components/animations";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Section from "../components/Section";
@@ -72,7 +74,7 @@ const Home = () => {
     },
   ];
   return (
-    <div className="flex flex-col min-h-screen">
+    <motion.div className="flex flex-col min-h-screen" initial="hidden" animate="visible" variants={staggerContainer}>
       <Navbar />
       <Hero
         backgroundImage={bghomesvg}
@@ -82,10 +84,10 @@ const Home = () => {
       />
       <main className="flex-grow">
         <div className="mt-4 gap-3 flex flex-col p-4">
-          <hr className="bg-primary w-[80px] h-[4px]" />
-          <p className="font-semibold text-[14px] font-poppins">
+          <motion.hr className="bg-primary w-[80px] h-[4px]" variants={slideInFromLeft} />
+          <motion.p className="font-semibold text-[14px] font-poppins" variants={fadeIn}>
             Our Trusted Partner & our proud Investor around the globe
-          </p>
+          </motion.p>
         </div>
 
         <Sponsor />
@@ -93,10 +95,10 @@ const Home = () => {
         {/* MOS */}
         <div className="bg-[#F9F5FF]">
           <Section title="What is MOS?">
-            <div className="mb-3 flex items-center justify-center">
+            <motion.div className="mb-3 flex items-center justify-center" variants={zoomIn}>
               <img src={whatismos} alt="What is Medicine on the Street" />
-            </div>
-            <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+            </motion.div>
+            <motion.div className="flex flex-col md:flex-row md:justify-between md:items-center" variants={zoomIn}>
               <Card
                 title="Medicine on the Street"
                 description="Donec dui massa, varius a consequat at, ultrices a neque. Ut augue erat, dignissim ultricies bibendum sed, pharetra ut neque. Aliquam venenatis felis odio, eget molestie velit tristique nec. Praesent ac erat sit amet risus maximus fermentum in a urna. Vivamus nec diam volutpat, fringilla leo imperdiet, porta augue. Sed sit amet ornare purus. Nam lacinia quam non massa commodo, vel consequat elit pharetra...."
@@ -109,7 +111,7 @@ const Home = () => {
                 img={<img src={east} alt="Icon" className="w-4 h-4" />}
                 text="Know more"
               />
-            </div>
+            </motion.div>
           </Section>
         </div>
 
@@ -247,7 +249,7 @@ const Home = () => {
         </div>
       </main>
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 

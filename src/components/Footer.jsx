@@ -1,9 +1,20 @@
 import React from 'react';
 import { logo, facebook, twitter, linkedin, instagram } from "../assets";
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { fadeIn } from "./animations"; // Reuse the fadeIn animation
 
 const Footer = () => {
+  const [footerRef, footerInView] = useInView({ triggerOnce: true, threshold: 0.2 });
+
   return (
-    <div className="bg-[#F9F5FF]">
+    <motion.div
+      className="bg-[#F9F5FF]"
+      initial="hidden"
+      animate={footerInView ? 'visible' : 'hidden'}
+      variants={fadeIn}
+      ref={footerRef}
+    >
       <div className="mt-3 p-4">
         <img src={logo} alt="doctorkays" />
         <p className="text-black font-semibold text-[16px]">Doctorkays</p>
@@ -48,7 +59,7 @@ const Footer = () => {
       {/* social media icons */}
       <div className="p-4 flex flex-row gap-3">
         <img src={facebook} className="w-[25px] h-[25px]" alt="facebook" />
-        <img src={twitter} className="w-[25x] h-[25px]" alt="twitter" />
+        <img src={twitter} className="w-[25px] h-[25px]" alt="twitter" />
         <img src={linkedin} className="w-[40px] h-[40px] pb-3" alt="linkedin" />
         <img src={instagram} className="w-[30px] h-[30px]" alt="instagram" />
       </div>
@@ -56,7 +67,7 @@ const Footer = () => {
       <footer className="bg-primary text-white p-4 text-center">
         <div>© 2024 Drkays</div>
       </footer>
-    </div>
+    </motion.div>
   );
 };
 
