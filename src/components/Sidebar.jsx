@@ -24,7 +24,7 @@ const Sidebar = ({ onClose }) => {
       variants={fadeIn}
     >
       <motion.aside
-        className="w-80 bg-white text-black h-full fixed top-0 right-0 shadow-lg"
+        className="w-70 bg-white text-black h-full fixed top-0 right-0 shadow-lg"
         initial="hidden"
         animate="visible"
         exit="hidden"
@@ -39,7 +39,7 @@ const Sidebar = ({ onClose }) => {
             <img src={close} alt="close" className="w-[30px] h-[30px]" />
           </motion.button>
         </div>
-        <ul className="mt-4">
+        <ul className="mt-4 w-fit">
           <motion.li
             whileHover={animateOnHover.whileHover}
             whileTap={animateOnHover.whileTap}

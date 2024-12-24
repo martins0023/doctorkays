@@ -6,6 +6,7 @@ import Blog from './pages/Blog';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Consultation from './pages/Consultation';
+import DrAi from './pages/DrAi';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/consultation" element={<Consultation />} />
+        <Route path="/dr-ai" element={<DrAi />} />
 
         <Route path="/blog" element={<Blog />} />
         {/* <Route path="/blog/:id" element={<BlogDetails />} /> */}

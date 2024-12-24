@@ -40,9 +40,14 @@ import abouttitle from "./about.svg";
 import journeytitle from "./journeytitle.svg";
 import doctorimage from "./doctorkays.jpg";
 import contacttitle from "./contact-title.svg";
-
+import aivoice from "./ai.gif";
+import aivoicestatic from "./ai.png"
+import northeastwhite from "./north_eas_white.png"
 
 export {
+  northeastwhite,
+  aivoice,
+  aivoicestatic,
   contacttitle,
   journeytitle,
   abouttitle,

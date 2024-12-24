@@ -10,10 +10,12 @@ import { stayintouch } from "../assets";
 import Stayintouch from "../components/Stayintouch";
 import Footer from "../components/Footer";
 import Form from "../components/Form";
+import { motion } from 'framer-motion';
+import { staggerContainer } from "../components/animations";
 
 const Consultation = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <motion.div className="flex flex-col min-h-screen" initial="hidden" animate="visible" variants={staggerContainer}>
       <Navbar />
       <Hero
         backgroundImage={bgconsult}
@@ -97,7 +99,7 @@ const Consultation = () => {
         <Stayintouch />
       </div>
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 

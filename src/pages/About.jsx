@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 import { clinicseries1, clinicseries2, doctorimage, north_east } from "../assets";
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
-import { fadeIn, slideInFromRight, animateOnHover, bounce, slideInFromLeft } from "../components/animations";
+import { fadeIn, slideInFromRight, animateOnHover, bounce, slideInFromLeft, staggerContainer } from "../components/animations";
 
 const About = () => {
   const journeyCards = [
@@ -34,7 +34,7 @@ const About = () => {
   const [stayInTouchRef, stayInTouchInView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <motion.div className="flex flex-col min-h-screen" initial="hidden" animate="visible" variants={staggerContainer}>
       <Navbar />
       <Hero
         backgroundImage={bgabout}
@@ -154,7 +154,7 @@ const About = () => {
         <Stayintouch />
       </motion.div>
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 

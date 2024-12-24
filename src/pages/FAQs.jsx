@@ -5,6 +5,8 @@ import { bgfaq, faqs } from "../assets";
 import Stayintouch from "../components/Stayintouch";
 import { stayintouch } from "../assets";
 import Footer from "../components/Footer";
+import { motion } from 'framer-motion';
+import { staggerContainer } from "../components/animations";
 
 const FAQs = () => {
   const faqsCard = [
@@ -20,32 +22,42 @@ const FAQs = () => {
       answer:
         "Morbi mattis nisi id orci finibus egestas Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
+    {
+      id: 3,
+      question: "Pellentesque tristique elit orci 3 ?",
+      answer:
+        "Morbi mattis nisi id orci finibus egestas Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      id: 4,
+      question: "Pellentesque tristique elit orci 4 ?",
+      answer:
+        "Morbi mattis nisi id orci finibus egestas Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
   ];
   return (
-    <div className="flex flex-col min-h-screen">
+    <motion.div className="flex flex-col min-h-screen" initial="hidden" animate="visible" variants={staggerContainer}>
       <Navbar />
       <Hero backgroundImage={bgfaq} text="FAQs Frequently Asked Questions" />
       <main className="flex-grow p-4">
         <div className="mt-4 gap-3 flex flex-col">
-          <hr className="bg-primary w-[80px] h-[4px]" />
+          <hr className="bg-primary w-[80px] h-[8px]" />
           <p className="font-semibold text-[14px] font-poppins">
             See frequently asked questions about our programs and thoughts
           </p>
         </div>
 
-        <div className="mb-3 flex flex-col gap-2 items-center justify-center mt-8">
+        <div className="mb-10 flex flex-col gap-2 items-center justify-center mt-8">
           <img src={faqs} alt="Frequently asked questions" />
-          <p className="font-montserrat text-[14px] text-center font-medium">
+          <p className="font-montserrat text-[16px] text-center font-medium">
             Donec dui massa, varius a consequat at, ultrices a neque. Ut augue
-            erat, dignissim ultricies bibendum sed, pharetra ut neque. Aliquam
-            venenatis felis odio, eget molestie velit tristique nec. Praesent ac
-            erat sit amet risus maximus fermentum in a urna.
+            erat, dignissim ultricies bibendum sed, pharetra ut neque.
           </p>
         </div>
 
         {/* loop faqs */}
         {faqsCard.map((card, index) => (
-          <div key={index} className="flex flex-col mt-10 mb-5">
+          <div key={index} className="flex flex-col mt-5 mb-5">
             <div className="bg-primary flex items-center justify-center justify-items-center w-[56px] h-[36px] rounded-md">
               <p className="text-white font-semibold text-[20px]">{card.id}</p>
             </div>
@@ -54,7 +66,7 @@ const FAQs = () => {
               <p className="font-semibold font-poppins text-[18px]">
                 {card.question}
               </p>
-              <p className="font-poppins font-normal text-[14px]">
+              <p className="font-poppins font-normal text-[16px]">
                 {card.answer}
               </p>
 
@@ -76,7 +88,7 @@ const FAQs = () => {
         <Stayintouch />
       </div>
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 

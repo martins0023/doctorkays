@@ -10,6 +10,8 @@ import { stayintouch } from "../assets";
 import Stayintouch from "../components/Stayintouch";
 import Footer from "../components/Footer";
 import Form from "../components/Form";
+import { motion } from 'framer-motion';
+import { fadeIn, slideInFromBottom, slideInFromLeft, staggerContainer } from "../components/animations";
 
 const Contact = () => {
   const handleFormSubmit = (formData) => {
@@ -17,7 +19,7 @@ const Contact = () => {
     // Add logic to send confirmation email here
   };
   return (
-    <div className="flex flex-col min-h-screen">
+    <motion.div className="flex flex-col min-h-screen" initial="hidden" animate="visible" variants={staggerContainer}>
       <Navbar />
       <Hero
         backgroundImage={bgcontact}
@@ -27,12 +29,12 @@ const Contact = () => {
         <div className="flex items-center justify-center mt-10">
           <img src={contacttitle} alt="Contact Us" />
         </div>
-        <p className="text-[16px] font-poppins font-normal">
+        <motion.p variants={slideInFromLeft} className="text-[16px] font-poppins font-normal">
           Do you want a personal appointment with your time and date
           personalized?
-        </p>
+        </motion.p>
 
-        <div className="items-center justify-center justify-items-center flex flex-col">
+        <motion.div variants={slideInFromBottom} className="items-center justify-center justify-items-center flex flex-col">
           <Button
             text="Book your appointment"
             className="bg-primary text-white rounded-full mt-4 h-[42px]"
@@ -41,22 +43,22 @@ const Contact = () => {
           <p className="text-[16px] font-poppins underline mt-2 font-normal">
             with calendly
           </p>
-        </div>
+        </motion.div>
 
-        <div className="mt-5">
+        <div className="mt-10">
           <p className="text-black font-semibold text-[30px] font-montserrat">
             Get in Touch
           </p>
           <hr className="bg-primary w-[80px] h-[4px]" />
-          <p className="mt-5 font-poppins text-[16px]">
+          <motion.p variants={slideInFromLeft} className="mt-5 font-poppins text-[16px]">
             Etiam ac metus diam. Ut porta ultrices pulvinar. Nulla sit amet
             congue neque, accumsan tempus eros.
-          </p>
+          </motion.p>
         </div>
 
-        <div className="mt-3">
+        <motion.div variants={slideInFromLeft} className="mt-3">
           <Form onSubmit={handleFormSubmit} />
-        </div>
+        </motion.div>
       </main>
 
       <div className="bg-[#F9F5FF] mt-3 p-4">
@@ -71,7 +73,7 @@ const Contact = () => {
         <Stayintouch />
       </div>
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 

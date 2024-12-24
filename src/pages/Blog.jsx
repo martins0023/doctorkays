@@ -7,6 +7,8 @@ import { bgblog, north_east,
   clinicseries1,
   clinicseries2,
   clinicsection, clinicseries } from "../assets"; // Adjust your import path accordingly
+import { motion } from 'framer-motion';
+import { staggerContainer } from "../components/animations";
 
 const dummyData = [
   { id: 1, category: "Blood Sugar", title: "Morbi mattis nisi id orci finibus egestas", date: "18 Dec 2024", readTime: "9 mins read", imgSrc: clinicseries1 },
@@ -17,7 +19,7 @@ const dummyData = [
 
 const Blog = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <motion.div className="flex flex-col min-h-screen" initial="hidden" animate="visible" variants={staggerContainer}>
       <Navbar />
       <Hero
         backgroundImage={bgblog}
@@ -62,7 +64,7 @@ const Blog = () => {
         </div>
       </main>
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 
