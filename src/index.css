@@ -88,7 +88,14 @@ button:focus-visible {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-color: #e5e7eb; /* Light text color for dark mode */
-    --primary-color: #1f2937; /* Dark primary color */
+    --text-color: #ffffff; /* Light text color for dark mode */
+    --primary-color: #5115B3; /* Dark primary color */
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: #111827; /* Dark text color for light mode */
+    --primary-color: #ffffff; /* Light primary color */
   }
 }
