@@ -18,12 +18,12 @@ const Footer = () => {
       <div className="mt-3 p-4">
         <img src={logo} alt="doctorkays" />
         <p className="text-black font-semibold text-[16px]">Doctorkays</p>
-        <p className="mt-1 font-medium text-[16px] font-montserrat">Donec dui massa, varius a consequat at, ultrices a neque. Ut augue erat, dignissim ultricies bibendum sed, pharetra ut neque.</p>
+        <p className="mt-1 font-medium text-[16px] text-black font-montserrat">Donec dui massa, varius a consequat at, ultrices a neque. Ut augue erat, dignissim ultricies bibendum sed, pharetra ut neque.</p>
       </div>
 
       {/* company */}
       <div className="p-4">
-        <p className="font-semibold text-[18px] font-montserrat">Company</p>
+        <p className="font-semibold text-[18px] text-black font-montserrat">Company</p>
         <hr className="bg-primary w-[63px] h-[4px]"/>
 
         <div className="mt-3 flex flex-col">
@@ -34,7 +34,7 @@ const Footer = () => {
 
       {/* products */}
       <div className="p-4">
-        <p className="font-semibold text-[18px] font-montserrat">Products</p>
+        <p className="font-semibold text-[18px] text-black font-montserrat">Products</p>
         <hr className="bg-primary w-[63px] h-[4px]"/>
 
         <div className="mt-3 flex flex-col">
@@ -45,7 +45,7 @@ const Footer = () => {
 
       {/* resources */}
       <div className="p-4">
-        <p className="font-semibold text-[18px] font-montserrat">Resources</p>
+        <p className="font-semibold text-black text-[18px] font-montserrat">Resources</p>
         <hr className="bg-primary w-[63px] h-[4px]"/>
 
         <div className="mt-3 flex flex-col">

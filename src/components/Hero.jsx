@@ -66,7 +66,7 @@ const Hero = ({
         <Button
           text="Book a consultation"
           onClick={handleConsultNav}
-          className="bg-primary mt-4 font-bold text-[16px] rounded-md"
+          className="bg-primary mt-4 font-bold text-[16px] rounded-md border-none"
         />
       </div>
     </motion.div>

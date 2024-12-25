@@ -26,6 +26,7 @@ import {
 } from "../assets";
 import Stayintouch from "../components/Stayintouch";
 import { doctorimage } from "../assets";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const healthNuggetCards = [
@@ -74,6 +75,51 @@ const Home = () => {
       img: moscard2,
     },
   ];
+
+  const dummyData = [
+    {
+      id: 1,
+      category: "Blood Sugar",
+      title: "Morbi mattis nisi id orci finibus egestas",
+      date: "18 Dec 2024",
+      readTime: "9 mins read",
+      description: "Morbi mattis nisi id orci finibus egestas Lorem ipsum dolor sit amet, consectetur Morbi mattis nisi id orci finibus egestas Lorem ipsum dolor sit amet, consectetur..",
+      imgSrc: clinicseries1,
+    },
+    {
+      id: 2,
+      category: "Pregnancy",
+      title: "Morbi mattis nisi id orci finibus egestas",
+      date: "18 Dec 2024",
+      readTime: "9 mins read",
+      description: "Morbi mattis nisi id orci finibus egestas Lorem ipsum dolor sit amet, consectetur Morbi mattis nisi id orci finibus egestas Lorem ipsum dolor sit amet, consectetur..",
+      imgSrc: clinicseries2,
+    },
+    {
+      id: 3,
+      category: "Diabetes",
+      title: "Morbi mattis nisi id orci finibus egestas",
+      date: "18 Dec 2024",
+      readTime: "9 mins read",
+      description: "Morbi mattis nisi id orci finibus egestas Lorem ipsum dolor sit amet, consectetur Morbi mattis nisi id orci finibus egestas Lorem ipsum dolor sit amet, consectetur..",
+      imgSrc: clinicseries,
+    },
+    {
+      id: 4,
+      category: "Diabetes",
+      title: "Morbi mattis nisi id orci finibus egestas",
+      date: "18 Dec 2024",
+      readTime: "9 mins read",
+      description: "Morbi mattis nisi id orci finibus egestas Lorem ipsum dolor sit amet, consectetur Morbi mattis nisi id orci finibus egestas Lorem ipsum dolor sit amet, consectetur..",
+      imgSrc: clinicseries,
+    },
+  ];
+
+  const navigate = useNavigate();
+
+  const handleNavigate = (blog) => {
+    navigate(`/blog/${blog.id}`, { state: blog });
+  };
   return (
     <motion.div className="flex flex-col min-h-screen" initial="hidden" animate="visible" variants={staggerContainer}>
       <Navbar />
@@ -86,7 +132,7 @@ const Home = () => {
       <main className="flex-grow">
         <div className="mt-4 gap-3 flex flex-col p-4">
           <motion.hr className="bg-primary w-[80px] h-[4px]" variants={slideInFromLeft} />
-          <motion.p className="font-semibold text-[14px] font-poppins" variants={fadeIn}>
+          <motion.p className="font-semibold text-[14px] text-black font-poppins" variants={fadeIn}>
             Our Trusted Partner & our proud Investor around the globe
           </motion.p>
         </div>
@@ -108,7 +154,7 @@ const Home = () => {
               />
               <Button
                 onClick={() => {}}
-                className="h-[51px] w-[185px] border-1 bg-none text-black font-bold rounded-full border-primary mt-4 md:mt-0 md:ml-4"
+                className="h-[51px] w-[185px] border-1 bg-none text-black font-bold rounded-full border-primary mt-4 md:mt-0 md:ml-4 bg-white"
                 img={<img src={east} alt="Icon" className="w-4 h-4" />}
                 text="Know more"
               />
@@ -157,7 +203,7 @@ const Home = () => {
                     <div className="flex justify-end items-end">
                       <Button
                         onClick={() => {}}
-                        className="h-[40px] w-[150px] border-1 bg-none text-black text-[12px] font-medium font-montserrat rounded-full border-primary mt-4 md:mt-0 md:ml-4"
+                        className="h-[40px] w-[150px] border-1 bg-none text-black text-[12px] font-medium font-montserrat rounded-full border-primary mt-4 md:mt-0 md:ml-4 bg-white"
                         img={<img src={east} alt="Icon" className="w-5 h-5" />}
                         text="Read more"
                       />
@@ -167,7 +213,7 @@ const Home = () => {
               </div>
             ))}
           </div>
-          <div className="flex flex-end items-end justify-center gap-3 text-primary font-semibold underline mt-5">
+          <div className="flex flex-end items-end justify-center gap-3 text-primary font-medium mt-5">
             <p className="text-black"> view more...</p>
           </div>
         </Section>
@@ -230,10 +276,55 @@ const Home = () => {
           <div className="mb-3 flex items-center justify-center">
             <img src={blogsection} alt="Blog" />
           </div>
-          <p className="font-montserrat text-[14px] text-center font-medium">
+          <p className="font-montserrat text-[16px] text-black text-center font-medium">
             Donec dui massa, varius a consequat at, ultrices a neque. Ut augue
             erat, dignissim ultricies bibendum sed, pharetra ut neque.
           </p>
+
+          <div className="mt-4">
+            {dummyData.map((item) => (
+              <div
+                key={item.id}
+                onClick={() => handleNavigate(item)} // Pass full blog data
+                className="bg-primary relative rounded-xl shadow-lg mb-5 overflow-hidden"
+              >
+                {/* Image Section */}
+                <img
+                  src={item.imgSrc}
+                  alt={item.title}
+                  className="w-full h-[198px] object-cover"
+                />
+
+                {/* Tag and Action */}
+                <div className="px-4 mt-2 flex justify-between items-center">
+                <motion.div variants={pulse} onClick={() => handleNavigate(item)} className="absolute top-3 right-3 bg-white rounded-full p-2 flex items-center justify-center">
+                    <img
+                      src={north_east}
+                      alt="north east"
+                      className="w-4 h-4"
+                    />
+                  </motion.div>
+                  <p className="absolute top-3 left-3 items-start text-black font-medium text-xs py-1 px-2 bg-white rounded-full">
+                    {`#${item.category}`}
+                  </p>
+                </div>
+
+                {/* Content Section */}
+                <div className="px-4 py-3">
+                  <h3 className="text-white text-lg font-bold">{item.title}</h3>
+                  <p className="text-[16px] text-gray-200 mt-2 leading-relaxed line-clamp-2">
+                    {item.description}
+                  </p>
+                </div>
+
+                {/* Date and Read Time */}
+                <div className="px-4 pb-3 flex justify-between items-center text-gray-400 text-xs">
+                  <p className="text-[14px]">{item.date}</p>
+                  <p className="text-[14px]">{item.readTime}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </Section>
 
         {/* stay in touch */}
@@ -241,7 +332,7 @@ const Home = () => {
           <div className="flex pt-5 items-center justify-center">
             <img src={stayintouch} alt="clinic series" />
           </div>
-          <p className="font-montserrat text-[14px] text-center font-medium mb-5">
+          <p className="font-montserrat text-[14px] text-black text-center font-medium mb-5">
             Stay connected to our community and never miss out on exciting
             updates.
           </p>
