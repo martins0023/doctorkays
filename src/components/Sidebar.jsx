@@ -33,7 +33,7 @@ const Sidebar = ({ onClose }) => {
         <div className="flex justify-end items-center p-4">
           <motion.button
             onClick={onClose}
-            className="text-black text-2xl font-bold focus:outline-none"
+            className="text-black text-2xl font-bold focus:outline-none bg-white"
             whileHover={{ scale: 1.1 }}
           >
             <img src={close} alt="close" className="w-[30px] h-[30px]" />

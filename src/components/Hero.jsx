@@ -40,7 +40,7 @@ const Hero = ({
   return (
     <motion.div
       variants={slideInFromRight}
-      className={`relative h-[329px] bg-cover bg-center`}
+      className={`relative h-[329px] bg-cover bg-center w-full`}
       style={{
         backgroundImage: `url(${backgroundImage})`,
         height: height || "329px",

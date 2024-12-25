@@ -9,7 +9,7 @@ const Card = ({ title, description, imageUrl, link }) => {
         className="w-full h-60 md:h-64 object-cover rounded-br-[50px]"
       />
       <div className="">
-        <h3 className="text-xl font-bold mt-2">{title}</h3>
+        <h3 className="text-xl text-black font-bold mt-2">{title}</h3>
         <p className="mt-2 text-black font-normal font-poppins text-[16px]">
           {description}
         </p>
