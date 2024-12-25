@@ -160,11 +160,11 @@ const BlogDetail = () => {
                     <p className="text-black font-medium text-xs py-1 px-2 bg-white rounded-full">
                       {`#${item.category}`}
                     </p>
-                    <p className="text-gray-400 text-xs">{item.date}</p>
+                    {/* <p className="text-gray-400 text-xs">{item.date}</p> */}
                   </div>
 
                   {/* Title and Description */}
-                  <h3 className="text-white text-lg font-bold mt-2">
+                  <h3 className="text-white text-[16px] font-bold mt-2">
                     {item.title}
                   </h3>
                   <p className="text-[16px] text-gray-200 mt-2 leading-relaxed line-clamp-2">

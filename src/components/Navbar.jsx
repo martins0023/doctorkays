@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { menu, logo } from "../assets";
 import Sidebar from "./Sidebar";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -9,10 +10,15 @@ const Navbar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
+  const navigate = useNavigate();
+  const handleHomeNav = () => {
+    navigate("/")
+  }
+
   return (
     <>
       <nav className="bg-primary text-white p-4 flex justify-between items-center w-full">
-        <div className="text-xl font-bold">
+        <div onClick={handleHomeNav} className="text-xl font-bold">
           <img src={logo} alt="logo" className="w-[71px] h-[49px]" />
         </div>
         <div>

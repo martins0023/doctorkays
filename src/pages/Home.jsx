@@ -213,9 +213,9 @@ const Home = () => {
               </div>
             ))}
           </div>
-          <div className="flex flex-end items-end justify-center gap-3 text-primary font-medium mt-5">
+          {/* <div className="flex flex-end items-end justify-center gap-3 text-primary font-medium mt-5">
             <p className="text-black"> view more...</p>
-          </div>
+          </div> */}
         </Section>
 
         {/* CLINIC SERIES */}
