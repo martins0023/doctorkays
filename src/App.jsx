@@ -8,6 +8,7 @@ import Contact from './pages/Contact';
 import Consultation from './pages/Consultation';
 import DrAi from './pages/DrAi';
 import NotFound from './components/NotFound';
+import BlogDetail from './pages/BlogDetail';
 
 const App = () => {
   return (
@@ -21,7 +22,7 @@ const App = () => {
         <Route path="/dr-ai" element={<DrAi />} />
 
         <Route path="/blog" element={<Blog />} />
-        {/* <Route path="/blog/:id" element={<BlogDetails />} /> */}
+        <Route path="/blog/:id" element={<BlogDetail />} />
 
         {/* Catch-all route for 404 */}
         <Route path="*" element={<NotFound />} />

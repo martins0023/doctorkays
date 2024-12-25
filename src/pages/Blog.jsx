@@ -13,6 +13,7 @@ import {
 } from "../assets"; // Adjust your import path accordingly
 import { motion } from "framer-motion";
 import { staggerContainer } from "../components/animations";
+import { useNavigate } from "react-router-dom";
 
 const dummyData = [
   {
@@ -54,6 +55,11 @@ const dummyData = [
 ];
 
 const Blog = () => {
+  const navigate = useNavigate();
+
+  const handleNavigate = (blog) => {
+    navigate(`/blog/${blog.id}`, { state: blog });
+  };
   return (
     <motion.div
       className="flex flex-col min-h-screen"
@@ -84,6 +90,7 @@ const Blog = () => {
             {dummyData.map((item) => (
               <div
                 key={item.id}
+                onClick={() => handleNavigate(item)} // Pass full blog data
                 className="bg-primary relative rounded-xl shadow-lg mb-5 overflow-hidden"
               >
                 {/* Image Section */}
@@ -127,7 +134,7 @@ const Blog = () => {
           <div className="flex justify-center mt-4">
             <Button
               text="1"
-              className="mx-1 px-3 py-2 rounded-md bg-primary text-white border border-primary text-primary"
+              className="mx-1 px-3 py-2 rounded-md bg-primary text-white border border-primary"
             />
             <Button
               text="2"
