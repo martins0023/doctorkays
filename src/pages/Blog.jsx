@@ -12,7 +12,7 @@ import {
   clinicseries,
 } from "../assets"; // Adjust your import path accordingly
 import { motion } from "framer-motion";
-import { staggerContainer } from "../components/animations";
+import { bounce, pulse, staggerContainer } from "../components/animations";
 import { useNavigate } from "react-router-dom";
 
 const dummyData = [
@@ -102,13 +102,13 @@ const Blog = () => {
 
                 {/* Tag and Action */}
                 <div className="px-4 mt-2 flex justify-between items-center">
-                <div className="absolute top-3 right-3 bg-white rounded-full p-2 flex items-center justify-center">
+                <motion.div variants={pulse} onClick={() => handleNavigate(item)} className="absolute top-3 right-3 bg-white rounded-full p-2 flex items-center justify-center">
                     <img
                       src={north_east}
                       alt="north east"
                       className="w-4 h-4"
                     />
-                  </div>
+                  </motion.div>
                   <p className="absolute top-3 left-3 items-start text-black font-medium text-xs py-1 px-2 bg-white rounded-full">
                     {`#${item.category}`}
                   </p>

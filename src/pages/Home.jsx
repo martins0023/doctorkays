@@ -25,6 +25,7 @@ import {
   clinicsection,
 } from "../assets";
 import Stayintouch from "../components/Stayintouch";
+import { doctorimage } from "../assets";
 
 const Home = () => {
   const healthNuggetCards = [
@@ -77,10 +78,10 @@ const Home = () => {
     <motion.div className="flex flex-col min-h-screen" initial="hidden" animate="visible" variants={staggerContainer}>
       <Navbar />
       <Hero
-        backgroundImage={bghomesvg}
-        text="Expert Health
-          for personalised
-          Solutions"
+        backgroundImage={doctorimage}
+        height="500px" // Set the height dynamically
+        marginTop="200px" // Override the default marginTop
+        text="Turning medicine from a head-scratcher into your friendly companion "
       />
       <main className="flex-grow">
         <div className="mt-4 gap-3 flex flex-col p-4">

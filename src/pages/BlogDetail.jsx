@@ -1,26 +1,36 @@
 import React from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Stayintouch from "../components/Stayintouch";
 import { keyboard_backspace } from "../assets";
 import { navigate_before } from "../assets";
 import { stayintouch } from "../assets";
+import BlogNotFound from "../components/BlogNotFound";
 
 const BlogDetail = () => {
   const { id } = useParams(); // Get the ID from the route
   const location = useLocation();
   const blog = location.state; // Access blog data from state
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate(-1); // Navigate back to the previous page
+  };
 
   if (!blog) {
-    return <p>Blog post not found.</p>; // Fallback in case state is missing
+    return (
+      <div className="">
+        <BlogNotFound />
+      </div>
+    ); // Fallback in case state is missing
   }
 
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <div className="p-4">
-        <div className="flex flex-row gap-3 items-center">
+      <div className="">
+        <div onClick={handleBack} className="flex flex-row gap-2 items-center cursor-pointer">
           <img src={navigate_before} className="w-8 h-8" />
           <p className="font-montserrat font-semibold text-[18px]">Back</p>
         </div>
@@ -31,17 +41,17 @@ const BlogDetail = () => {
               #{blog.category}
             </p>
           </div>
-          <div>
-            <div>
+
           <h1 className="text-2xl font-bold mt-3">{blog.title}</h1>
-          <p className="text-sm text-gray-500">{`${blog.date} • ${blog.readTime}`}</p>
+          <div className="mt-1 flex row justify-between">
+            <p className="text-sm font-medium font-montserrat text-black">{`${blog.date} • ${blog.readTime}`}</p>
+            <p className="text-sm font-medium font-montserrat">By Doctor Kays</p>
           </div>
-          <div>By Doctor Kays</div>
-          </div>
+
           <img
             src={blog.imgSrc}
             alt={blog.title}
-            className="w-full mt-4 rounded-lg"
+            className="w-full h-[280.48px] object-cover mt-4 rounded-2xl"
           />
           <p className="mt-4">{blog.description}</p>
         </div>
