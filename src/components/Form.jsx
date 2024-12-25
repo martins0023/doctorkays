@@ -26,7 +26,7 @@ const Form = ({ onSubmit }) => {
   return (
     <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-7">
       <div className="mb-4">
-        <label className="font-semibold text-[16px]">First Name</label>
+        <label className="font-semibold text-[16px] text-black">First Name</label>
         <input
           type="text"
           name="firstName"
@@ -38,7 +38,7 @@ const Form = ({ onSubmit }) => {
         />
       </div>
       <div className="mb-4">
-        <label className="font-semibold text-[16px]">Last Name</label>
+        <label className="font-semibold text-[16px] text-black">Last Name</label>
         <input
           type="text"
           name="lastName"
@@ -50,7 +50,7 @@ const Form = ({ onSubmit }) => {
         />
       </div>
       <div className="mb-4">
-        <label className="font-semibold text-[16px]">Email</label>
+        <label className="font-semibold text-[16px] text-black">Email</label>
         <input
           type="email"
           name="email"
@@ -62,7 +62,7 @@ const Form = ({ onSubmit }) => {
         />
       </div>
       <div className="mb-4">
-        <label className="font-semibold text-[16px]">Mobile Number</label>
+        <label className="font-semibold text-[16px] text-black">Mobile Number</label>
         <input
           type="tel"
           name="phone"
@@ -74,7 +74,7 @@ const Form = ({ onSubmit }) => {
         />
       </div>
       <div className="mb-4">
-        <label className="font-semibold text-[16px]">Your Message</label>
+        <label className="font-semibold text-[16px] text-black">Your Message</label>
         <textarea
           name="message"
           placeholder="Your Message"

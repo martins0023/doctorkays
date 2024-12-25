@@ -21,7 +21,7 @@ const Consultation = () => {
         backgroundImage={bgconsult}
         text="Health Consultation Talk to an Expert Today"
       />
-      <ConsultCarousel />
+      
       <main className="flex-grow p-4">
         <p className="font-poppins text-black font-semibold text-[30px]">
           Meet
@@ -39,7 +39,7 @@ const Consultation = () => {
           </p>
         </div>
 
-        <p className="mt-5 font-poppins text-[16px] font-normal">
+        <p className="mt-5 font-poppins text-[16px] font-normal text-black">
           About Olayiwola Babatunde Emmanuel (Doctor Kays) ‘Hey folks, I’m not
           your run-of-the-mill medical doctor. I am a tech lover, family
           advocate and firm believer in preventive and community medicine. My
@@ -91,7 +91,7 @@ const Consultation = () => {
         <div className="flex pt-5 items-center justify-center">
           <img src={stayintouch} alt="stay in touch" />
         </div>
-        <p className="font-montserrat text-[14px] text-center font-medium mb-5">
+        <p className="font-montserrat text-black text-[14px] text-center font-medium mb-5">
           Stay connected to our community and never miss out on exciting
           updates.
         </p>

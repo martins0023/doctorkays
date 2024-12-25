@@ -42,14 +42,14 @@ const FAQs = () => {
       <main className="flex-grow p-4">
         <div className="mt-4 gap-3 flex flex-col">
           <hr className="bg-primary w-[80px] h-[8px]" />
-          <p className="font-semibold text-[14px] font-poppins">
+          <p className="font-semibold text-[14px] text-gray-700 font-poppins">
             See frequently asked questions about our programs and thoughts
           </p>
         </div>
 
         <div className="mb-10 flex flex-col gap-2 items-center justify-center mt-8">
           <img src={faqs} alt="Frequently asked questions" />
-          <p className="font-montserrat text-[16px] text-center font-medium">
+          <p className="font-montserrat text-[16px] text-black text-center font-medium">
             Donec dui massa, varius a consequat at, ultrices a neque. Ut augue
             erat, dignissim ultricies bibendum sed, pharetra ut neque.
           </p>
@@ -63,10 +63,10 @@ const FAQs = () => {
             </div>
 
             <div className="flex flex-col mt-3">
-              <p className="font-semibold font-poppins text-[18px]">
+              <p className="font-semibold text-black font-montserrat text-[18px]">
                 {card.question}
               </p>
-              <p className="font-poppins font-normal text-[16px]">
+              <p className="font-montserrat text-black font-normal text-[16px]">
                 {card.answer}
               </p>
 
@@ -80,7 +80,7 @@ const FAQs = () => {
         <div className="flex pt-5 items-center justify-center">
           <img src={stayintouch} alt="clinic series" />
         </div>
-        <p className="font-montserrat text-[14px] text-center font-medium mb-5">
+        <p className="font-montserrat text-[14px] text-black text-center font-medium mb-5">
           Stay connected to our community and never miss out on exciting
           updates.
         </p>

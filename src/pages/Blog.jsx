@@ -70,12 +70,13 @@ const Blog = () => {
       <Navbar />
       <Hero
         backgroundImage={bgblog}
+        marginTop="80px"
         text="Latest Blog Delve Deeper Into Our Writing Collection"
       />
       <main className="flex-grow">
         <div className="mt-4 gap-3 flex flex-col p-4">
           <hr className="bg-primary w-[80px] h-[4px]" />
-          <p className="font-semibold text-[14px] font-poppins">
+          <p className="font-semibold text-gray-700 text-[14px] font-poppins">
             Read the latest news and trending blogs regarding health matters and
             issues
           </p>

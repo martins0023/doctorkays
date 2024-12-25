@@ -132,7 +132,7 @@ const Home = () => {
       <main className="flex-grow">
         <div className="mt-4 gap-3 flex flex-col p-4">
           <motion.hr className="bg-primary w-[80px] h-[4px]" variants={slideInFromLeft} />
-          <motion.p className="font-semibold text-[14px] text-black font-poppins" variants={fadeIn}>
+          <motion.p className="font-semibold text-[14px] text-gray-700 font-poppins" variants={fadeIn}>
             Our Trusted Partner & our proud Investor around the globe
           </motion.p>
         </div>
@@ -167,7 +167,7 @@ const Home = () => {
           <div className="mb-3 flex items-center justify-center">
             <img src={healthnugget} alt="What is Health Nugget" />
           </div>
-          <p className="font-montserrat text-[16px] text-center font-medium">
+          <p className="font-montserrat text-[16px] text-black text-center font-medium">
             Donec dui massa, varius a consequat at, ultrices a neque. Ut augue
             erat, dignissim ultricies bibendum sed, pharetra ut neque. Aliquam
             venenatis felis odio, eget molestie velit tristique nec. Praesent ac
@@ -224,7 +224,7 @@ const Home = () => {
             <img src={clinicsection} alt="clinic series" />
           </div>
           <div className="">
-            <p className="font-montserrat p-4 text-[16px] text-center font-medium">
+            <p className="font-montserrat text-black p-4 text-[16px] text-center font-medium">
               Donec dui massa, varius a consequat at, ultrices a neque. Ut augue
               erat, dignissim ultricies bibendum sed, pharetra ut neque. Aliquam
               venenatis felis odio, eget molestie velit tristique nec. Praesent

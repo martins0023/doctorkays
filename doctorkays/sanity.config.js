@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'doctorkays',
 
-  projectId: '99evlxt5',
+  projectId: 'fzqbc52s',
   dataset: 'production',
 
   plugins: [structureTool(), visionTool()],

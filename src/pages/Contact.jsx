@@ -29,7 +29,7 @@ const Contact = () => {
         <div className="flex items-center justify-center mt-10">
           <img src={contacttitle} alt="Contact Us" />
         </div>
-        <motion.p variants={slideInFromLeft} className="text-[16px] font-poppins font-normal">
+        <motion.p variants={slideInFromLeft} className="text-[16px] text-black font-poppins font-normal">
           Do you want a personal appointment with your time and date
           personalized?
         </motion.p>
@@ -40,7 +40,7 @@ const Contact = () => {
             className="bg-primary text-white rounded-full mt-4 h-[42px]"
             // img={<div className="w-[40.03px] h-[40.03px] bg-white rounded-full p-1 flex items-center justify-center"><img src={east} alt="Icon" className="w-5 h-5" /> </div>}
           />
-          <p className="text-[16px] font-poppins underline mt-2 font-normal">
+          <p className="text-[16px] text-black font-poppins underline mt-2 font-normal">
             with calendly
           </p>
         </motion.div>
@@ -50,7 +50,7 @@ const Contact = () => {
             Get in Touch
           </p>
           <hr className="bg-primary w-[80px] h-[4px]" />
-          <motion.p variants={slideInFromLeft} className="mt-5 font-poppins text-[16px]">
+          <motion.p variants={slideInFromLeft} className="mt-5 text-black font-poppins text-[16px]">
             Etiam ac metus diam. Ut porta ultrices pulvinar. Nulla sit amet
             congue neque, accumsan tempus eros.
           </motion.p>
@@ -65,7 +65,7 @@ const Contact = () => {
         <div className="flex pt-5 items-center justify-center">
           <img src={stayintouch} alt="stay in touch" />
         </div>
-        <p className="font-montserrat text-[14px] text-center font-medium mb-5">
+        <p className="font-montserrat text-black text-[14px] text-center font-medium mb-5">
           Stay connected to our community and never miss out on exciting
           updates.
         </p>
