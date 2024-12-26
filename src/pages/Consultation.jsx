@@ -20,6 +20,7 @@ const Consultation = () => {
       <Hero
         backgroundImage={bgconsult}
         text="Health Consultation Talk to an Expert Today"
+        marginTop="80px"
       />
       
       <main className="flex-grow p-4">
