@@ -167,7 +167,7 @@ const BlogDetail = () => {
                   <h3 className="text-white text-[16px] font-bold mt-2">
                     {item.title}
                   </h3>
-                  <p className="text-[16px] text-gray-200 mt-2 leading-relaxed line-clamp-2">
+                  <p className="text-[16px] text-gray-200 mt-2 leading-relaxed line-clamp-3">
                     {item.description}
                   </p>
 

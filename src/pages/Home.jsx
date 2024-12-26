@@ -27,6 +27,7 @@ import {
 import Stayintouch from "../components/Stayintouch";
 import { doctorimage } from "../assets";
 import { useNavigate } from "react-router-dom";
+import Testimonials from "../components/Testimonials";
 
 const Home = () => {
   const healthNuggetCards = [
@@ -326,6 +327,10 @@ const Home = () => {
             ))}
           </div>
         </Section>
+
+        <div className="p-4">
+          <Testimonials />
+        </div>
 
         {/* stay in touch */}
         <div className="bg-[#F9F5FF] mt-3 p-4">

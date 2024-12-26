@@ -16,7 +16,7 @@ const Footer = () => {
       ref={footerRef}
     >
       <div className="mt-3 p-4">
-        <img src={logo} alt="doctorkays" />
+        <img src={logo} alt="doctorkays" className="w-20 h-20" />
         <p className="text-black font-semibold text-[16px]">Doctorkays</p>
         <p className="mt-1 font-medium text-[16px] text-black font-montserrat">Donec dui massa, varius a consequat at, ultrices a neque. Ut augue erat, dignissim ultricies bibendum sed, pharetra ut neque.</p>
       </div>
@@ -29,6 +29,7 @@ const Footer = () => {
         <div className="mt-3 flex flex-col">
           <p className="cursor-pointer font-normal text-[16px] font-montserrat text-black">About us</p>
           <p className="cursor-pointer font-normal text-[16px] font-montserrat text-black">Contact</p>
+          <p className="cursor-pointer font-normal text-[16px] font-montserrat text-black">Become a Sponsor/Collaborate</p>
         </div>
       </div>
 

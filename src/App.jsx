@@ -9,6 +9,7 @@ import Consultation from './pages/Consultation';
 import DrAi from './pages/DrAi';
 import NotFound from './components/NotFound';
 import BlogDetail from './pages/BlogDetail';
+import Services from './pages/Services';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/consultation" element={<Consultation />} />
         <Route path="/dr-ai" element={<DrAi />} />
+        <Route path="/services" element={<Services />} />
 
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogDetail />} />

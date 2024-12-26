@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-primary text-white p-4 flex justify-between items-center w-full">
+      <nav className="bg-white text-white p-4 flex justify-between items-center w-full">
         <div onClick={handleHomeNav} className="text-xl font-bold">
           <img src={logo} alt="logo" className="w-[71px] h-[49px]" />
         </div>

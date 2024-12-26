@@ -1,5 +1,6 @@
 import menu from "./menu.png";
-import logo from "./logo-christmas.png";
+import logo from "./logo.svg";
+import jerry from "./jerry.png";
 import close from "./close.png";
 import keyboard_backspace from "./keyboard_backspace.png";
 import navigate_before from "./navigate_before.png";
@@ -43,10 +44,23 @@ import contacttitle from "./contact-title.svg";
 import aivoice from "./ai.gif";
 import aivoicestatic from "./ai.png"
 import northeastwhite from "./north_eas_white.png"
+import miracle from "./miracle.png";
+import yungs from "./yungs.png";
+import reviews from "./reviews.svg";
+import sponsorship from "./sponsorship.svg";
+import pricingIcon from "./pricing.svg";
+import servicesIcon from "./services.svg";
 
 export {
+  servicesIcon,
+  pricingIcon,
+  reviews,
+  sponsorship,
+  miracle,
+  yungs,
   northeastwhite,
   aivoice,
+  jerry,
   aivoicestatic,
   contacttitle,
   journeytitle,

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from "framer-motion";
 import { animateOnHover, pulse } from './animations';
 
-const Button = ({ text, onClick, className, img }) => {
+const Button = ({ text, onClick, className, img, variants }) => {
   return (
     <motion.button
       variants={pulse}
