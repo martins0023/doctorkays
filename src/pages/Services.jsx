@@ -151,7 +151,7 @@ const Services = () => {
                     <div className="flex justify-center mb-4">
                       {service.icon}
                     </div>
-                    <h3 className="text-xl font-semibold text-center mb-2">
+                    <h3 className="text-xl font-semibold text-center text-black mb-2">
                       {service.title}
                     </h3>
                     <p className="text-gray-600 text-center">
