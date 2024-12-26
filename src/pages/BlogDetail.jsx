@@ -142,47 +142,41 @@ const BlogDetail = () => {
               <div
                 key={item.id}
                 onClick={() => handleNavigate(item)} // Pass full blog data
-                className="bg-primary relative rounded-xl cursor-pointer shadow-lg mb-5 overflow-hidden flex"
+                className="bg-primary relative rounded-xl shadow-lg mb-5 overflow-hidden"
               >
                 {/* Image Section */}
-                <div className="flex-shrink-0">
-                  <img
-                    src={item.imgSrc}
-                    alt={item.title}
-                    className="w-[150px] h-[200px] object-cover"
-                  />
-                </div>
+                <img
+                  src={item.imgSrc}
+                  alt={item.title}
+                  className="w-full h-[198px] object-cover"
+                />
 
-                {/* Content Section */}
-                <div className="flex-grow p-4">
-                  {/* Tag and Date */}
-                  <div className="flex justify-between items-center">
-                    <p className="text-black font-medium text-xs py-1 px-2 bg-white rounded-full">
-                      {`#${item.category}`}
-                    </p>
-                    {/* <p className="text-gray-400 text-xs">{item.date}</p> */}
-                  </div>
-
-                  {/* Title and Description */}
-                  <h3 className="text-white text-[16px] font-bold mt-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-[16px] text-gray-200 mt-2 leading-relaxed line-clamp-3">
-                    {item.description}
-                  </p>
-
-                  {/* Read More Action */}
-                  <motion.div
-                    variants={pulse}
-                    onClick={() => handleNavigate(item)}
-                    className="absolute bottom-3 left-3 bg-white rounded-full p-2 flex items-center justify-center"
-                  >
+                {/* Tag and Action */}
+                <div className="px-4 mt-2 flex justify-between items-center">
+                <motion.div variants={pulse} onClick={() => handleNavigate(item)} className="absolute top-3 right-3 bg-white rounded-full p-2 flex items-center justify-center">
                     <img
                       src={north_east}
                       alt="north east"
-                      className="w-5 h-5"
+                      className="w-4 h-4"
                     />
                   </motion.div>
+                  <p className="absolute top-3 left-3 items-start text-black font-medium text-xs py-1 px-2 bg-white rounded-full">
+                    {`#${item.category}`}
+                  </p>
+                </div>
+
+                {/* Content Section */}
+                <div className="px-4 py-3">
+                  <h3 className="text-white text-lg font-bold">{item.title}</h3>
+                  <p className="text-[16px] text-gray-200 mt-2 leading-relaxed line-clamp-2">
+                    {item.description}
+                  </p>
+                </div>
+
+                {/* Date and Read Time */}
+                <div className="px-4 pb-3 flex justify-between items-center text-gray-400 text-xs">
+                  <p className="text-[14px]">{item.date}</p>
+                  <p className="text-[14px]">{item.readTime}</p>
                 </div>
               </div>
             ))}
